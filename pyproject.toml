@@ -1,0 +1,56 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mcpfuzz"
+version = "0.1.0"
+description = "Dynamic security scanner for MCP (Model Context Protocol) servers — actively probes live servers with exploit payloads"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Cyberneticsplus Services Private Limited", email = "info@cyberneticsplus.com"}
+]
+keywords = ["mcp", "security", "fuzzing", "vulnerability", "scanner", "ai-security", "pentest"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Information Technology",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Security",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+requires-python = ">=3.11"
+dependencies = [
+    "mcp>=1.23.0",
+    "click>=8.1.0",
+    "httpx>=0.28.0",
+    "httpx-sse>=0.4.0",
+    "rich>=14.0.0",
+    "pyyaml>=6.0",
+    "jinja2>=3.1.0",
+    "anyio>=4.5.0",
+]
+
+[project.optional-dependencies]
+llm    = ["anthropic>=0.86.0"]                                   # Anthropic Claude      (--llm-provider anthropic)
+ollama = ["ollama>=0.4.0"]                                       # Ollama cloud + local  (--llm-provider ollama)
+openai = ["openai>=1.0.0"]                                       # OpenAI API            (--llm-provider openai)
+all    = ["anthropic>=0.86.0", "ollama>=0.4.0", "openai>=1.0.0"] # All providers
+
+[project.scripts]
+mcpfuzz = "mcpfuzz.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/Cyberneticsplus-Services/mcpfuzz"
+Repository = "https://github.com/Cyberneticsplus-Services/mcpfuzz"
+Issues = "https://github.com/Cyberneticsplus-Services/mcpfuzz/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/mcpfuzz"]
+
+[tool.hatch.build.targets.wheel.sources]
+"src" = ""

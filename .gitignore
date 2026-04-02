@@ -1,0 +1,85 @@
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+.venv/
+venv/
+env/
+.env
+*.so
+.DS_Store
+.pytest_cache/
+.coverage
+htmlcov/
+*.log
+~/.mcpfuzz/
+
+# Scanner runtime artifacts — created during active scanning
+*.db
+poc/
+mcpfuzz-findings.md
+mcpfuzz-targets.md
+
+# Scan result directories — never commit raw scan output
+wave1-results/
+wave2-results/
+wave*/
+*-results/
+
+# ── Scanner-created junk in repo dir ─────────────────────────────────────────
+# MCP servers run via npx/uvx create files in cwd during scanning.
+# Path traversal / SSTI / injection test artifacts also land here.
+
+# SSTI / template injection test directories
+${7*7}/
+'${7*7}'/
+"${7*7}"/
+<%= 7*7 %>/
+"<%= 7*7 %>"/
+
+# URL-encoded path traversal artifacts
+%2e*/
+..%2*/
+%2*/
+
+# Format string artifacts
+%s%s*/
+
+# Windows path traversal string-named files
+"..\\*"
+
+# CLI injection flag-named files
+--db-path
+--sqlite
+--*
+
+# Dotdot path traversal literal directories
+..../
+...*/
+
+# MCPFuzz probe markers (created by SSRF/OOB callback probes)
+MCPFUZZ_LEAK_MARKER_*/
+"MCPFUZZ_PROBE*"
+
+# MCP server runtime artifacts (created by scanned servers in cwd)
+.intlayer/
+.rigour/
+.planu/
+planu/
+3fe97e7e37e64439
+
+# General injection-named files/dirs (single quoted, double quoted)
+'"*'
+"'*"
+
+/tmp/mcpfuzz-*/
+
+# CSV target lists — large, regenerated from collect_mcp_targets.py
+mcpfuzz-targets-*.csv
+*.csv
