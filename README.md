@@ -426,7 +426,7 @@ Contributions welcome — especially new test modules for emerging MCP attack pa
 
 Built and maintained by **[Cyberneticsplus Services Private Limited](https://cyberneticsplus.com)** — AI security research and penetration testing.
 
-CVE research contact: mahesh@cyberneticsplus.com
+CVE research contact: info@cyberneticsplus.com
 
 ---
 
