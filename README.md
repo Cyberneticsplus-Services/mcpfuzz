@@ -435,7 +435,7 @@ CVE research contact: info@cyberneticsplus.com
 | Tool | Description |
 |------|-------------|
 | [SecurityStatus.io](https://securitystatus.io) | Automated domain security scanner — checks DNS, SSL, email authentication, HTTP headers, and vulnerability exposure in one report |
-| [AIWorkview](https://app.aiworkview.com) | AI-agent-native project management — task tracking and coordination built for AI teams and autonomous agent workflows |
+| [AIWorkview](https://aiworkview.com) | AI-agent-native project management — task tracking and coordination built for AI teams and autonomous agent workflows |
 
 ---
 
