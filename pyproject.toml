@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "mcpfuzz"
-version = "0.1.1"
+version = "0.1.2"
 description = "Dynamic security scanner for MCP (Model Context Protocol) servers — actively probes live servers with exploit payloads"
 readme = "README.md"
 license = {text = "MIT"}
