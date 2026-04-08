@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "mcpfuzz"
-version = "0.1.0"
+version = "0.1.1"
 description = "Dynamic security scanner for MCP (Model Context Protocol) servers — actively probes live servers with exploit payloads"
 readme = "README.md"
 license = {text = "MIT"}
@@ -13,7 +13,7 @@ authors = [
 ]
 keywords = ["mcp", "security", "fuzzing", "vulnerability", "scanner", "ai-security", "pentest"]
 classifiers = [
-    "Development Status :: 3 - Alpha",
+    "Development Status :: 4 - Beta",
     "Environment :: Console",
     "Intended Audience :: Information Technology",
     "License :: OSI Approved :: MIT License",
